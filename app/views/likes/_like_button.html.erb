@@ -1,0 +1,15 @@
+<% if current_user.liking?(post) %>
+  <%= form_with(model: current_user.likes.find_by(post_id: post.id), local: true, method: :delete) do |f| %>
+    <%= hidden_field_tag :like_id, post.id %>      
+    <%= f.button :type => "submit", class: 'unlike_button', style: 'border-style: none; outline: none;' do %>
+      <i class="far fa-heart unlike"></i>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= form_with(model: current_user.likes.build, local: true) do |f| %>
+    <%= hidden_field_tag :like_id, post.id %>
+    <%= f.button :type => "submit", class: 'like_button', style: 'border-style: none; outline: none;' do %>
+      <i class="far fa-heart like"></i>
+    <% end %>
+  <% end %>
+<% end %>

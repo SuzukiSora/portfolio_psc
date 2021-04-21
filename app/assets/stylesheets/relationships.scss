@@ -1,0 +1,33 @@
+// Place all the styles related to the relationships controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#followings,
+#followers {
+
+  padding-top: 80px;
+  text-align: center;
+  margin: auto;
+
+  h1 {
+    margin-bottom: 5vh;
+    border-bottom: 3px solid black;
+  }
+
+}
+
+#f_button {
+
+  form {
+    text-align: center;
+  }
+
+  .follow_h1,
+  .follower_h1 {
+
+    input {
+      width: 12vw;
+      margin: 0 auto 1vh;
+    }
+  }
+}

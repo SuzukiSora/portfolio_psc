@@ -1,0 +1,32 @@
+<div id="posts" class="row">
+  <div class="col-md-6 offset-md-3">
+    <ul class="list-unstyled text-center">
+      <h1 class="in_h1">投稿検索</h1>
+      <div id="search">
+        <%= search_form_for @q do |f| %>
+          <div class="search_form">
+            <%= f.label :名前： %>
+            <%= f.search_field :title_cont %>
+          </div>
+          <div class="search_btn">
+            <%= f.submit %>
+          </div>
+        <% end %>
+      </div>
+      <table class="table table-hover">
+        <tr>
+          <th></th>
+          <th>ユーザ名</th>
+          <th>年齢</th>
+        </tr>
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= link_to '投稿', post_path(post) %></td>
+            <td class="text-center"><%= post.title %></td>
+            <td class="text-center"><%= post.year %></td>
+          </tr>
+        <% end %>
+      </table>
+    </ul>
+  </div>
+</div>

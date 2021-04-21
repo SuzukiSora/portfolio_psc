@@ -1,0 +1,41 @@
+<!-- scssはusers.scss -->
+
+<div id="user_e" class="text-center">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h4>プロフィールを編集</h4>
+      <%= form_with model: @user, local: true do |f| %>
+
+        <div class="field">
+          <div class="text_common">
+            <%= f.label :name, "名前", class: "c_label" %><br />
+            <%= f.text_field :name, autofocus: true, class: 'name_text' %><br>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="text_common">
+            <%= f.label :age, "年齢", class: "c_label" %><br/>
+            <%= f.number_field :age, class: 'age_text' %><br>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="text_common">
+            <%= f.label :comment, "自己紹介", class: "c_label" %><br />
+            <%= f.text_area :comment, class: 'comment_text' %><br>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= f.file_field :image %><br>
+        </div>
+
+        <div class="action">
+          <%= f.submit "変更" , class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

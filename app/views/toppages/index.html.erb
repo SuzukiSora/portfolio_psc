@@ -1,0 +1,64 @@
+<% if user_signed_in? %>
+  <div id="s_users">
+    <div class="row">
+      <aside id="name_card" class="col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <%= current_user.name %>
+          </div>
+          <div class="card-body">
+
+            <div class="profile">
+              <%= link_to 'プロフィールを編集', edit_user_path(current_user), class: "btn btn-light profile_btn" %>
+            </div>
+            <div class="profile">
+              <%= link_to '投稿', new_post_path(current_user), class: 'btn btn-light profile_btn' %>
+            </div>
+            
+
+            <div class="age_text">
+              年齢： <%=  current_user.age %>years old
+            </div>
+
+            <div class="box17">
+              <%= simple_format(current_user.comment) %>
+            </div>
+
+            <% if current_user.image.attached? %>
+              <div class="user_image">
+                <%= image_tag current_user.image %>
+              </div>
+            <% end %>
+
+          </div>
+        </div>
+      </aside>
+      <div id="navbar" class="col-lg-8">
+        <ul class="nav nav-justified mb-3">
+          <li class="nav-btn nav-item"><%= link_to 'フォロー', followings_user_path(current_user.id) %></li>
+          <li class="nav-btn nav-item"><%= link_to 'フォロワー', followers_user_path(current_user.id) %></li>
+          <li class="nav-btn nav-item"><%= link_to 'LIKE', likes_user_path(current_user.id) %></li>
+        </ul>
+        <%= render 'posts/post', posts: @posts %>
+      </div>
+    </div>
+  </div> 
+<% else %>
+  <div class="t_page">
+    <div id="toppage" class="jumbotron">
+      <div class="text-center">
+        <h1>お気に入りの映画をみんなに教えよう</h1><br>
+        <p>あなたのお気に入りの映画を投稿してみんなに教えてあげよう</p><br>
+        <p>他の人の投稿で新しいお気に入り映画を発見しよう</p>
+      </div>
+    </div>
+    <div id="btn" class="text-center">
+      <div class="btn-group-vertical">
+        <%= link_to '新規登録', new_user_registration_path, class: 'btn btn-primary' %>
+        <%= link_to 'ログイン', new_user_session_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
+    <%= render 'shared/footer' %>
+  </div>
+<% end %>
+

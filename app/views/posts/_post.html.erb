@@ -1,0 +1,25 @@
+<div class="card" id="post-container">
+  <% @posts.each do |post| %> 
+    <div style=" margin-bottom: 1.5vh;">
+      <div class="card-body" id="element">
+        <div class="title">
+          <%= render 'likes/like_button', post: post %>
+          <%= post.title %>
+        </div>
+        <%= link_to "この投稿を見る", post_path(post) %>        
+        <% if post.image.attached? %>
+          <div class="image">
+            <%= image_tag post.image %>
+          </div>
+        <% end %>
+
+        <div class="post_edit">
+          <% if current_user == post.user %>
+            <%= link_to '投稿を編集', edit_post_path(post), class: "post_edit btn btn-light profile_btn" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <%= paginate posts %>
+</div>

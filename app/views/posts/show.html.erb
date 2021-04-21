@@ -1,0 +1,51 @@
+<div id="show_post">
+  
+  <div class="show_header">
+    <h3>POST</h3>
+  </div>
+
+  <div class="row show_body">
+
+    <div class="col-sm-8">
+      <div class="show_title">
+        <h5>タイトル</h5>
+      </div>
+      <div class="show_content">
+        <%= @post.title %>
+      </div>
+
+      <div class="show_title">
+        <h5>公開年</h5>
+      </div>
+      <div class="show_content">
+        <%= @post.year %>
+      </div>
+
+      <div class="show_title">
+        <h5>キャスト</h5>
+      </div>
+      <div class = "show_content">
+        <%= @post.cast %>
+      </div>
+
+      <div class="show_title"">
+        <h5>あらすじ・見所</h5>
+      </div>
+      <div class="show_content">
+        <div class="summary">
+          <%=  simple_format(@post.summary) %>
+        </div>
+      </div>
+    </div>
+
+    <div class="show_img col-sm-4">
+      <% if @post.image.attached? %>
+        <div class="user_image">
+          <%= image_tag @post.image %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,96 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#users,
+#posts {
+  padding: 60px;
+
+  #search {
+    .search_form {
+      input {
+        margin-bottom: 20px;
+        width: 50%;
+        border-radius: 10px;
+        margin-right: 4vw;
+      }
+    }
+
+    .search_btn {
+      input {
+        border-radius: 10px;
+        margin-bottom: 20px;
+        width: 20%;
+      }
+    }
+  }
+
+  .in_h1 {
+    margin: 20px;
+  }
+
+  .table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-top: black 1px solid;
+    color: black;
+  }
+
+}
+
+
+
+
+#user_e {
+  padding-top: 70px;
+
+  h4 {
+    margin: 30px auto;
+    font-weight: bold;
+    border-bottom: 2px solid greenyellow;
+  }
+
+  .field {
+
+    .c_label {
+      font-size: 20px;
+    }
+
+    .age_text {
+      border: 2px solid grey;
+      border-radius: 0.67em;
+      padding: 0.5em;
+      background-color: #80808021;
+      font-size: 1em;
+      line-height: 1.2;
+    }
+
+    .name_text {
+      border: 2px solid grey;
+      border-radius: 0.67em;
+      padding: 0.5em;
+      background-color: #80808021;
+      font-size: 1em;
+      line-height: 1.2;
+      width: 15vw;
+      height: 5vh;
+    }
+
+    .comment_text {
+      border: 2px solid grey;
+      border-radius: 0.67em;
+      padding: 0.5em;
+      background-color: #80808021;
+      font-size: 1em;
+      line-height: 1.2;
+      width: 30vw;
+      height: 25vh;
+    }
+
+
+
+
+  }
+
+}

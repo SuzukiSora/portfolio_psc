@@ -1,0 +1,143 @@
+// Place all the styles related to the toppages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&family=RocknRoll+One&display=swap');
+
+
+
+#s_users {
+  padding: 65px 2vw 10px 2vw;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  background-image: url("image2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+
+
+
+
+  #name_card {
+    margin-top: 60px;
+
+    .card {
+      text-align: center;
+
+      .card-header {
+        border: 2px solid black;
+        font-weight: bold;
+        font-family: 'Noto Serif JP', serif;
+        font-family: 'RocknRoll One', sans-serif;
+      }
+
+      .card-body {
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+        border-bottom: 2px solid black;
+
+        .profile {
+          margin-bottom: 2vh;
+
+          a {
+            background-color: #c2c3c3;
+            border: 2px solid black;
+          }
+        }
+
+        .age_text {
+          margin-bottom: 1vw;
+        }
+
+        .user_comment {
+          border: 2px solid black;
+          margin-bottom: 2vh;
+
+          p {
+            padding: 10px;
+          }
+
+        }
+
+
+        .user_image {
+          img {
+            border: 2px solid black;
+            width: 20vw;
+            height: 20vw;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  #navbar {
+
+    margin-top: 20px;
+
+    .nav-btn {
+      padding-right: 0;
+      padding-top: 0.7vh;
+      padding-bottom: 0.7vh;
+      margin: auto 4vw;
+      background-color: #615c5cfc;
+      border: 3px groove black;
+
+      a {
+        color: palevioletred;
+      }
+
+    }
+
+
+  }
+
+
+
+}
+
+
+.t_page {
+
+
+  background-image: url("image1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+
+  padding-top: 80px;
+
+  .jumbotron {
+    margin: 6vh 5vw;
+    padding: 4vh;
+    background-color: #000000e8;
+
+    h1,
+    p {
+      font-family: 'RocknRoll One', sans-serif;
+      margin-bottom: 0px;
+      color: #bf5063;
+      text-shadow: 1px 0 5px #ffffffad;
+    }
+  }
+
+  #btn {
+    a {
+      padding: 2vh 6vw;
+      margin-bottom: 4vh;
+      border-radius: 20px;
+      background-color: #007bffb3;
+    }
+  }
+
+}

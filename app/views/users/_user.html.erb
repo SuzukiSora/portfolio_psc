@@ -1,0 +1,10 @@
+<div id="navbar" class="col-lg-8">
+  <ul class="nav nav-justified mb-3">
+    <li class="nav-btn nav-item"><%= link_to 'フォロー', followings_user_path(@user.id) %></li>
+    <li class="nav-btn nav-item"><%= link_to 'フォロワー', followers_user_path(@user.id) %></li>
+    <li class="nav-btn nav-item"><%= link_to 'LIKE', likes_user_path(@user.id) %></li>
+  </ul>
+  <%= render 'posts/post', posts: @posts %>
+</div>
+
+<!-- toppage, users/show 用共通の予定 -->

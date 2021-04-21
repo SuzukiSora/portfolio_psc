@@ -1,0 +1,32 @@
+<div id="users" class="row">
+  <div class="col-md-6 offset-md-3">
+    <ul class="list-unstyled text-center">
+      <h1 class="in_h1">ユーザー検索</h1>
+      <div id="search">
+        <%= search_form_for @q do |f| %>
+          <div class="search_form">
+            <%= f.label :名前： %>
+            <%= f.search_field :name_cont %>
+          </div>
+          <div class="search_btn">
+            <%= f.submit %>
+          </div>
+        <% end %>
+      </div>
+      <table class="table table-hover">
+        <tr>
+          <th></th>
+          <th>ユーザ名</th>
+          <th>年齢</th>
+        </tr>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= link_to 'HOME', user_path(user) %></td>
+            <td class="text-center"><%= user.name %></td>
+            <td class="text-center"><%= user.age %></td>
+          </tr>
+        <% end %>
+      </table>
+    </ul>
+  </div>
+</div>

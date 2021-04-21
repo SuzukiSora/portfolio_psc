@@ -1,0 +1,40 @@
+<div id="s_users">
+  <div class="row">
+    <aside id="name_card" class="col-lg-4">
+      <%= render 'relationships/follow_button', user: @user %>
+      <div class="card">
+        <div class="card-header">
+          <%= @user.name %>
+        </div>
+        <div class="card-body">
+
+          <% if current_user == @user %>
+            <div class="profile">
+              <%= link_to 'プロフィールを編集', edit_user_path(@user), class: "btn btn-light profile_btn" %>
+            </div>
+            <div class="profile">
+              <%= link_to '投稿', new_post_path(@user), class: 'btn btn-light profile_btn' %>
+            </div>
+          <% end %>
+
+          <div class="age_text">
+            年齢： <%=  @user.age %>years old
+          </div>
+
+          <div class="box17">
+            <%= simple_format(@user.comment) %>
+          </div>
+
+          <% if @user.image.attached? %>
+            <div class="user_image">
+              <%= image_tag @user.image %>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+    </aside>
+    <%= render 'users/user', users: @users %>
+  </div>
+</div> 
+
