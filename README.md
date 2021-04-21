@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+・アプリ概要
 
-Things you may want to cover:
+自分の好きな映画を共有できるアプリです。
 
-* Ruby version
+・使っている技術
 
-* System dependencies
+データベース：mysql
+開発環境：docker
+言語：ruby on rails 
 
-* Configuration
 
-* Database creation
+・アプリ機能
+sign in , sign up , log out →　device
+画像を投稿する　→　active　storage
+検索機能　→　ransack
+いいね、フォロー機能
 
-* Database initialization
+今後の追加予定機能
 
-* How to run the test suite
+AWSを用いたデプロイ
+自動デプロイ
+S3を用いた画像アップロード　など
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
